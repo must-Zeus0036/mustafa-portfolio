@@ -48,7 +48,7 @@ export default function Hero() {
   }, [tick]);
 
   return (
-    <header id="top" className="pt-22 pb-24 px-8 sm:px-5">
+    <header id="top" className="pt-24 pb-24 px-8 sm:px-5">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 items-center pt-6">
         <div>
           <div className="mb-8 flex items-center gap-5">
