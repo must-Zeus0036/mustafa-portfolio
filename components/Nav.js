@@ -9,12 +9,12 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 bg-ink-950/85 backdrop-blur-md border-b border-ink-700">
-      <div className="max-w-5xl mx-auto px-4 sm:px-5 h-16 flex items-center justify-between gap-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-5 h-16 flex flex-wrap items-center justify-between gap-3">
         <div className="font-mono font-semibold text-sm tracking-wide text-ink-100 whitespace-nowrap flex-shrink-0">
           MUSTAFA<span className="text-brass-400">.</span>AL-BAYATI
         </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-end gap-3 sm:gap-7 overflow-x-auto whitespace-nowrap text-[13px] font-mono text-ink-400">
+        <div className="w-full sm:w-auto">
+          <div className="flex flex-wrap justify-end gap-3 sm:gap-7 text-[13px] font-mono text-ink-400">
             {links.map((l) => (
               <a key={l.href} href={l.href} className="hover:text-ink-100 transition-colors inline-block">
                 {l.label}
