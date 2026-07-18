@@ -10,18 +10,21 @@ const PROJECTS = [
     title: 'Interactive House',
     desc: 'A connected home system pairing an Arduino sensor layer with a web and mobile interface - covering firmware, data flow, and UI in one project.',
     chips: ['Arduino', 'C++', 'Rust', 'Next.js', 'TypeScript', 'Firebase', 'Web', 'Mobile'],
+    github: 'https://github.com/DanielJ0131/interactive-house.git',
   },
   {
     tag: 'Full-Stack',
     title: 'Linux Platform Full-Stack Project',
     desc: 'An end-to-end web application built and deployed on a Linux platform, with a React/Next.js frontend backed by a Flask API.',
     chips: ['React', 'JavaScript', 'MongoDB', 'HTML', 'CSS', 'Docker', 'Linux'],
+    github: 'https://github.com/must-Zeus0036/LXLP.git',
   },
   {
     tag: 'Machine Learning',
     title: 'SMS Spam Classification',
     desc: 'A supervised text-classification model trained to distinguish spam from legitimate SMS messages, from data cleaning through evaluation.',
     chips: ['Python', 'scikit-learn', 'NLP'],
+    github: 'https://github.com/must-Zeus0036/Final-Project-Machine-Learning.git',
   },
 ];
 
@@ -36,7 +39,7 @@ export default function Projects() {
 
         <div className="grid sm:grid-cols-2 gap-px bg-ink-700 border border-ink-700">
           {PROJECTS.map((p) => (
-            <div key={p.title} className="bg-ink-950 hover:bg-ink-850 transition-colors p-8">
+            <a key={p.title} href={p.github} target="_blank" rel="noopener noreferrer" className="bg-ink-950 hover:bg-ink-850 transition-colors p-8 block">
               <div className="font-mono text-[10.5px] text-brass-300 uppercase tracking-wide">{p.tag}</div>
               <div className="font-display text-xl mt-2.5 text-ink-100 font-semibold">{p.title}</div>
               <p className="mt-3 text-[14.5px] text-ink-400 leading-relaxed">{p.desc}</p>
@@ -47,7 +50,7 @@ export default function Projects() {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
