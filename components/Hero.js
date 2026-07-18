@@ -53,7 +53,7 @@ export default function Hero() {
         <div>
           <div className="mb-8 flex items-center gap-5">
             <div className="w-28 h-28 rounded-full overflow-hidden border border-ink-700 bg-ink-950">
-              <img src="/mustafa.jpg" alt="Profile picture" className="w-full h-full object-cover" />
+              <img src="/ma.jpg" alt="Profile picture" className="w-full h-full object-cover" />
             </div>
             <div className="eyebrow text-ink-200">
               Software Engineer · Lund, Sweden
