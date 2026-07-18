@@ -7,9 +7,9 @@ const ITEMS = [
   },
   {
     date: '2023 — 2026',
-    role: 'B.Sc. Computer Science and Software Development',
+    role: 'B.Sc. Computer Science | Software Engineering',
     org: 'Kristianstad University',
-    desc: 'Coursework spanning systems programming, software architecture, and applied computer security, alongside project-based UI design work.',
+    desc: 'Coursework spanning systems programming, software architecture, and applied computer security, alongside project based UI design work.',
   },
 ];
 

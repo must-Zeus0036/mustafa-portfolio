@@ -63,8 +63,8 @@ export default function Hero() {
             I turn <span className="text-brass-400">legacy systems</span> into what comes next.
           </h1>
           <p className="mt-5 text-[17px] text-ink-400 max-w-[46ch] leading-relaxed">
-            Computer Science graduate with hands-on experience across systems programming,
-            full-stack development, and applied AI — including building an LLM-driven
+            Computer Science graduate with hands on experience across systems programming,
+            full-stack development, and applied AI including building an LLM-driven
             framework that translates legacy C into idiomatic Rust.
           </p>
           <div className="mt-8 flex gap-3.5 flex-wrap">
