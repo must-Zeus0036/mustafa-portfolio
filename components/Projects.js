@@ -6,16 +6,16 @@ const PROJECTS = [
     chips: ['Python', 'Rust', 'C', 'LLMs', 'Linux'],
   },
   {
-    tag: 'IoT · Web · Embedded',
-    title: 'Smart House',
-    desc: 'A connected-home system pairing an Arduino sensor layer with a web and mobile interface — covering firmware, data flow, and UI in one project.',
-    chips: ['Arduino', 'C++', 'Web', 'Mobile'],
+    tag: 'IoT · Embedded',
+    title: 'Interactive House',
+    desc: 'A connected home system pairing an Arduino sensor layer with a web and mobile interface - covering firmware, data flow, and UI in one project.',
+    chips: ['Arduino', 'C++', 'Rust', 'Next.js', 'TypeScript', 'Firebase', 'Web', 'Mobile'],
   },
   {
     tag: 'Full-Stack',
     title: 'Linux Platform Full-Stack Project',
     desc: 'An end-to-end web application built and deployed on a Linux platform, with a React/Next.js frontend backed by a Flask API.',
-    chips: ['React', 'Next.js', 'Flask', 'Linux'],
+    chips: ['React', 'JavaScript', 'MongoDB', 'HTML', 'CSS', 'Docker', 'Linux'],
   },
   {
     tag: 'Machine Learning',
