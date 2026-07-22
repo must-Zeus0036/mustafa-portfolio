@@ -1,8 +1,8 @@
 const PROJECTS = [
   {
-    tag: 'Bachelor Thesis · Axis Communications',
-    title: 'AI Framework for C → Rust Translation',
-    desc: 'An LLM-driven framework that translates legacy C codebases into idiomatic, memory-safe Rust — built and evaluated within a professional R&D team over six months.',
+    tag: 'Bachelor Thesis · Axis Communications - Lund',
+    title: 'Efficient C to Rust Translation',
+    desc: 'Hybrid pipeline (Hardcoded rules + LLMs + specific prompts) that translates legacy C codebases into idiomatic, memory-safe Rust — built and evaluated within a professional R&D team over 5 months.',
     chips: ['Python', 'Rust', 'C', 'LLMs', 'Linux'],
   },
   {
