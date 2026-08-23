@@ -3,7 +3,7 @@ const ITEMS = [
     date: 'Jan 2026 — Jun 2026',
     role: 'Bachelor Thesis Intern',
     org: 'Axis Communications, Lund',
-    desc: 'Built an AI-based framework translating legacy C code into idiomatic Rust. Worked with Python, LLMs, and Linux within a professional R&D team, using Git/Gerrit-based code review workflows.',
+    desc: 'Built an AI-based framework translating legacy C code into idiomatic Rust. Worked with Python, LLMs, and Linux within a professional R&D team, using Git/Gerrit-based code review workflows. Wrote unit tests using pytest for backend Python modules and implemented browser automation tests for the UI.',
   },
   {
     date: '2023 — 2026',

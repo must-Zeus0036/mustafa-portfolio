@@ -3,6 +3,7 @@ const GROUPS = [
   { label: 'Web', items: ['React', 'Next.js', 'Flask'] },
   { label: 'Systems & Tools', items: ['Linux', 'Git / Gerrit', 'Docker', 'SQL'] },
   { label: 'AI / ML', items: ['LLM tooling', 'Prompt engineering', 'Applied ML basics'] },
+  { label: 'Testing', items: ['Unit testing (pytest, Jest)', 'E2E / browser automation (Playwright)'] },
 ];
 
 export default function Skills() {
