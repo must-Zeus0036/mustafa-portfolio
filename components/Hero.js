@@ -24,15 +24,34 @@ export default function Hero() {
     if (!el) return;
     el.innerHTML = '';
 
+    // Ensure a starting height so transitions have a baseline. Keep a sensible minimum.
+    el.style.height = `${el.scrollHeight || 230}px`;
+    el.style.overflow = 'hidden';
+
     let t = 0;
     const timers = [];
-    LINES.forEach((ln) => {
+    LINES.forEach((ln, idx) => {
       t += ln.delay;
       const id = setTimeout(() => {
         const div = document.createElement('div');
         div.className = 'code-line';
         div.innerHTML = ln.html;
         el.appendChild(div);
+
+        if (!reduced) {
+          // Smoothly expand to fit content
+          el.style.height = `${el.scrollHeight}px`;
+
+          // After the last line, allow the height to become 'auto' so it adapts naturally
+          if (idx === LINES.length - 1) {
+            const settle = setTimeout(() => {
+              el.style.height = 'auto';
+              el.style.overflow = 'visible';
+              clearTimeout(settle);
+            }, 350);
+            timers.push(settle);
+          }
+        }
       }, reduced ? 0 : t);
       timers.push(id);
     });
@@ -44,6 +63,11 @@ export default function Hero() {
     return () => {
       timers.forEach(clearTimeout);
       if (interval) clearInterval(interval);
+      // cleanup inline styles
+      if (el) {
+        el.style.height = null;
+        el.style.overflow = null;
+      }
     };
   }, [tick]);
 
@@ -86,7 +110,7 @@ export default function Hero() {
               translate.rs — bachelor thesis, Axis Communications
             </div>
           </div>
-          <div ref={containerRef} className="font-mono text-[13px] px-5 py-5 min-h-[230px]" />
+          <div ref={containerRef} className="font-mono text-[13px] px-5 py-5 h-[230px] overflow-hidden" />
         </div>
       </div>
 
