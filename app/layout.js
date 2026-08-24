@@ -1,5 +1,6 @@
 import './globals.css';
-import CodeRainBackground from '@/components/CodeRainBackground';
+import SpaceBackground from '@/components/SpaceBackground';
+
 
 export const metadata = {
   title: 'Mustafa Al-Bayati — Software Engineer',
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="font-body">
-        <CodeRainBackground />
+        <SpaceBackground />
         {children}
       </body>
     </html>
