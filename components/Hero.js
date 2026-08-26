@@ -20,20 +20,14 @@ export default function Hero() {
 
   useEffect(() => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isWide = window.matchMedia('(min-width: 768px)').matches; // desktop/tablet
+
     const el = containerRef.current;
     if (!el) return;
     el.innerHTML = '';
 
-    // On narrow screens keep a fixed, scrollable box to avoid layout shifts.
-    if (!isWide) {
-      el.style.height = el.style.height || '200px';
-      el.style.overflow = 'auto';
-    } else {
-      // On wide screens, prepare for smooth expansion animation.
-      el.style.height = `${el.scrollHeight || 230}px`;
-      el.style.overflow = 'hidden';
-    }
+    // Ensure a starting height so transitions have a baseline. Keep a sensible minimum.
+    el.style.height = `${el.scrollHeight || 230}px`;
+    el.style.overflow = 'hidden';
 
     let t = 0;
     const timers = [];
@@ -45,10 +39,11 @@ export default function Hero() {
         div.innerHTML = ln.html;
         el.appendChild(div);
 
-        // Only animate height on wide screens and when motion is allowed.
-        if (isWide && !reduced) {
+        if (!reduced) {
+          // Smoothly expand to fit content
           el.style.height = `${el.scrollHeight}px`;
 
+          // After the last line, allow the height to become 'auto' so it adapts naturally
           if (idx === LINES.length - 1) {
             const settle = setTimeout(() => {
               el.style.height = 'auto';
@@ -63,7 +58,7 @@ export default function Hero() {
     });
 
     let interval;
-    if (!reduced && isWide) {
+    if (!reduced) {
       interval = setInterval(() => setTick((n) => n + 1), 7000);
     }
     return () => {
@@ -116,10 +111,7 @@ export default function Hero() {
               translate.rs — bachelor thesis, Axis Communications
             </div>
           </div>
-          <div
-            ref={containerRef}
-            className="font-mono text-[13px] px-5 py-5 h-[200px] sm:h-auto overflow-auto"
-          />
+          <div ref={containerRef} className="font-mono text-[13px] px-5 py-5 h-[230px] overflow-hidden" />
         </div>
       </div>
 
